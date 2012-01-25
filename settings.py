@@ -104,7 +104,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'ViacodeTimeManager.urls'
 
-TEMPLATE_DIRS = ('D:/Projects/OpenSource/ViacodeTimeManager/templates',)
+TEMPLATE_DIRS = ('templates',)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
