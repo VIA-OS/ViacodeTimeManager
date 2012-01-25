@@ -6,6 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'ViacodeTimeManager.Tasks.views.index'),
+    (r'^accounts/login/$', 'django.contrib.auth.views.login'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
