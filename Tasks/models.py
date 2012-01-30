@@ -9,7 +9,7 @@ class Task(models.Model):
     task_create_date = models.DateTimeField(default=datetime.datetime.now())
     change_date = models.DateTimeField(blank=True)
     offsets_count = models.IntegerField(default=0)
-
+    #fghgf
     author = models.ForeignKey(User, blank= True)
     importance = models.BooleanField()
     urgency = models.BooleanField()
