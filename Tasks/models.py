@@ -36,4 +36,4 @@ class TaskAdmin(admin.ModelAdmin):
         data = request.GET.copy()
         data['created_by'] = request.user
         request.GET = data
-        return super(TaskAdmin, self).add_view(request, form_url="", extra_context=extra_context)
+        return super(TaskAdmin, self).add_view(request, form_url, extra_context=extra_context)
