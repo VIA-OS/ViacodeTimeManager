@@ -1,0 +1,10 @@
+
+{% extends "index.html" %}
+{% block content %}
+{% for task in tasks %}
+    <h2>{{task.task_title}}</h2>
+    <!--p>{{ task.description }}</p>
+    <p>{{ task.task_create_date }}</p!-->
+    <p>{{ task.assigned_to_date }}</p>
+{% endfor %}
+{% endblock %}
