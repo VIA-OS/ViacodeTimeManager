@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <title>Bootstrap, from Twitter</title>
 
-    <!-- Add Jquery controls - Not clear why Static_URL doesnt work!!!-->
+    <!-- Add Jquery controls-->
 
     <link type="text/css" href="{{STATIC_URL}}example/css/redmond/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
     <script type="text/javascript" src="{{STATIC_URL}}example/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="{{STATIC_URL}}example/js/jquery-ui-1.8.17.custom.min.js"></script>
+    <!-- Block content for all scripts-->
+    {% block scripts %}{% endblock %}
+
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -63,13 +66,6 @@
         }
 
     </style>
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 </head>
 
 <body>
@@ -81,15 +77,6 @@
         </div>
         <div class="row">
             {% block content %}{% endblock %}
-            <!--
-            <div class="span10">
-                <h2>Main content</h2>
-
-            </div>
-            <div class="span4">
-                <h3>Secondary content</h3>
-            </div>
-            -->
         </div>
     </div>
 

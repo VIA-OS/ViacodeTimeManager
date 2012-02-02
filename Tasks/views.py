@@ -15,7 +15,7 @@ def index(request):
 def list_all_tasks(request):
     current_user = request.user
     tasks = Task.objects.filter(created_by=current_user.id)
-    return render_to_response("my tasks.html", { 'tasks': tasks }, context_instance=RequestContext(request))
+    return render_to_response("tm.tasks.html", { 'tasks': tasks }, context_instance=RequestContext(request))
 
 #ordering
 #class Meta:
