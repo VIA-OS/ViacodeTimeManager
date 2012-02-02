@@ -3,6 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Bootstrap, from Twitter</title>
+
+    <!-- Add Jquery controls - Not clear why Static_URL doesnt work!!!-->
+
+    <link type="text/css" href="{{STATIC_URL}}example/css/redmond/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="{{STATIC_URL}}example/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}example/js/jquery-ui-1.8.17.custom.min.js"></script>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -67,7 +73,6 @@
 </head>
 
 <body>
-
 <div class="container">
 
     <div class="content">
@@ -94,6 +99,5 @@
     </footer>
 
 </div> <!-- /container -->
-
 </body>
 </html>
