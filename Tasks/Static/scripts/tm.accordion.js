@@ -7,8 +7,25 @@
  */
 /** Accordion control jquery script*/
 $(function() {
-    $( "#accordion" ).accordion({
-        collapsible: true,
-        autoHeight: false
+    var stop = false;
+    $( "#accordion h3" ).click(function( event ) {
+        if ( stop ) {
+            event.stopImmediatePropagation();
+            event.preventDefault();
+            stop = false;
+        }
     });
+    $( "#accordion" )
+        .accordion({
+            header: "> div > h3",
+            collapsible: true,
+            autoHeight: false
+        })
+        .sortable({
+            axis: "y",
+            handle: "h3",
+            stop: function() {
+                stop = true;
+            }
+        });
 });

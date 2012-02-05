@@ -10,15 +10,16 @@
 {% block content %}
 <div id="accordion">
 {% for task in tasks %}
-    <h3>
-        <a href="#">{{task.task_title}}
-        </a>
-        <p>{{ task.assigned_to_date }}
-        </p>
-    </h3>
     <div>
-    <p>{{ task.description }}</p>
-    <p>{{ task.task_create_date }}</p>
+        <h3>
+            <a href="#">{{ task.assigned_to_date }} {{task.task_title}}
+            </a>
+        </h3>
+
+        <div>
+            <p>{{ task.description }}</p>
+            <p>{{ task.task_create_date }}</p>
+        </div>
     </div>
 {% endfor %}
 </div>
