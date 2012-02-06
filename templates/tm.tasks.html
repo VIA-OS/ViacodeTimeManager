@@ -3,6 +3,7 @@
 <!-- Block for all custom scripts-->
 {% block scripts %}
     <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.accordion.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.draggable.js"></script>
 {% endblock %}
 
 
@@ -10,7 +11,7 @@
 {% block content %}
 <div id="accordion">
 {% for task in tasks %}
-    <div>
+    <div id="draggable">
         <h3>
             <a href="#">{{ task.assigned_to_date }} {{task.task_title}}
             </a>
