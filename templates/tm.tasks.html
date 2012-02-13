@@ -10,8 +10,9 @@
 <!-- Block for tasks -->
 {% block content %}
 <div id="accordion">
+
 {% for task in tasks %}
-    <div id="draggable">
+    <div class="mydrags">
         <h3>
             <a href="#">{{ task.assigned_to_date }} {{task.task_title}}
             </a>
@@ -23,5 +24,6 @@
         </div>
     </div>
 {% endfor %}
+
 </div>
 {% endblock %}
