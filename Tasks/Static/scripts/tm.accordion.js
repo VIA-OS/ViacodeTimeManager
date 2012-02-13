@@ -19,9 +19,10 @@ $(function() {
         .accordion({
             header: "> div > h3",
             collapsible: true,
-            autoHeight: false
+            autoHeight: true
         })
         .sortable({
+            placeholder: "ui-state-highlight",
             axis: "y",
             handle: "h3",
             stop: function() {

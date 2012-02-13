@@ -4,6 +4,7 @@
 {% block scripts %}
     <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.accordion.js"></script>
     <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.draggable.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.buttons.js"></script>
 {% endblock %}
 
 
@@ -14,10 +15,13 @@
 {% for task in tasks %}
     <div class="mydrags">
         <h3>
-            <a href="#">{{ task.assigned_to_date }} {{task.task_title}}
+            <a href="#">
+                <button class="sort_button"></button>
+                <button class="drag_button"></button>
+                {{ task.assigned_to_date }} {{task.task_title}}
             </a>
-        </h3>
 
+        </h3>
         <div>
             <p>{{ task.description }}</p>
             <p>{{ task.task_create_date }}</p>
