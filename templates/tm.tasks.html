@@ -5,13 +5,17 @@
     <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.accordion.js"></script>
     <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.draggable.js"></script>
     <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.buttons.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.ajax.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.datefilter.js"></script>
 {% endblock %}
 
 
 <!-- Block for tasks -->
 {% block content %}
+<div class="date_filter">
+    <p>Date: <input type="text" id="task_by_date_filter"></p>
+</div>
 <div id="accordion">
-
 {% for task in tasks %}
     <div class="mydrags">
         <h3>
