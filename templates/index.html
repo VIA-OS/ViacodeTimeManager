@@ -9,6 +9,14 @@
     <link type="text/css" href="{{STATIC_URL}}example/css/redmond/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
     <script type="text/javascript" src="{{STATIC_URL}}example/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="{{STATIC_URL}}example/js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript">
+
+        var urlContainer = function() {
+            this.static = "{{STATIC_URL}}";
+            return this;
+        }();
+
+    </script>
     <!-- Block content for all scripts-->
     {% block scripts %}{% endblock %}
 

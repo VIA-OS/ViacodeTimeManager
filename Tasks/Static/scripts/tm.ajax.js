@@ -9,7 +9,9 @@
     $(document).ready(function() {
         $.get("/list_tasks_ajax"
             , function(data) {
-            alert(data);
+            /**alert(data);**/
+            html = new EJS({url: urlContainer.static + 'templates/tm.tasks.ejs'}).render(data)
+            $('#accordion').html(html);
         });
     });
     /**$.post("/list_tasks_ajax", {

@@ -7,7 +7,6 @@
     <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.buttons.js"></script>
     <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.ajax.js"></script>
     <script type="text/javascript" src="{{STATIC_URL}}scripts/tm.datefilter.js"></script>
-    <script type="text/javascript" src="{{STATIC_URL}}scripts/ejs_production.js"></script>
 {% endblock %}
 
 
@@ -17,6 +16,22 @@
     <p>Date: <input type="text" id="task_by_date_filter"></p>
 </div>
 <div id="accordion">
+{% for task in tasks %}
+    <div class="mydrags">
+        <h3>
+            <a href="#">
+                <button class="sort_button"></button>
+                <button class="drag_button"></button>
+                {{ task.assigned_to_date }} {{task.task_title}}
+            </a>
+
+        </h3>
+        <div>
+            <p>{{ task.description }}</p>
+            <p>{{ task.task_create_date }}</p>
+        </div>
+    </div>
+{% endfor %}
 
 </div>
 {% endblock %}
